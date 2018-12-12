@@ -1,25 +1,15 @@
 
 package Model;
 
-public class Estado {
-    private int id;
+public class Estado extends Padrao {    
     private String sigla;
-    private String nome;
     
     public Estado(){
         
     }
     public Estado(int id, String sigla, String nome){
-        this.setId(id);
+        super(id, nome);
         this.setSigla(sigla);
-        this.setNome(nome);
-    }
-
-    public int getId() {
-        return id;
-    }
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getSigla() {
@@ -27,17 +17,5 @@ public class Estado {
     }
     public void setSigla(String sigla) {
         this.sigla = sigla;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    @Override
-    public String toString() {
-        return nome;
-    }       
+    }      
 }
