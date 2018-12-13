@@ -20,6 +20,7 @@ public class Teste {
         System.out.println(estado.getNome());
         */
         
+        /*
         DaoCidade daoCidade = new DaoCidade();
         Cidade cidade = new Cidade();
         
@@ -32,6 +33,7 @@ public class Teste {
         for (Cidade lista : listas) {
             System.out.println(lista.getEstado().getNome()+" - "+ lista.getNome());
         }
+        */
     }
  
 }

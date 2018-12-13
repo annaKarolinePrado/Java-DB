@@ -10,7 +10,7 @@ import java.util.List;
 
 public class DaoCidade extends Dao{
     
-     public Cidade getCidade(int pk) throws SQLException{
+    public Cidade getCidade(int pk) throws SQLException{
         ResultSet rs = super.executeQuery("SELECT * FROM cidades WHERE id="+pk);
         return (rs.next() ? populateObject(rs) : null);
     }
