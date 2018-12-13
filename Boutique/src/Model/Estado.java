@@ -7,7 +7,7 @@ public class Estado extends Padrao {
     public Estado(){
         
     }
-    public Estado(int id, String sigla, String nome){
+    public Estado(int id, String nome, String sigla){
         super(id, nome);
         this.setSigla(sigla);
     }
