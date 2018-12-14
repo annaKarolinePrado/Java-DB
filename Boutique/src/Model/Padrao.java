@@ -2,7 +2,9 @@
 package Model;
 
 abstract public class Padrao {
+    @SwingColumn(description = "Código",colorOfBackgound = "")
     private int id;
+    @SwingColumn(description = "Nome",colorOfBackgound = "")
     private String nome;
     
     public Padrao(){

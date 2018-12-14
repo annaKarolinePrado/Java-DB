@@ -11,9 +11,8 @@ import java.util.List;
 public class DaoCategoria extends Dao {
     
     public int addCategoria(Categoria categoria) throws SQLException{
-        String sql = "INSERT INTO categoria(id, nome, sigla) VALUES (?,?,?)";
+        String sql = "INSERT INTO categoria( nome, status) VALUES (?,?)";
         return (super.executeUpdate(sql,
-                    categoria.getId(),
                     categoria.getNome(),
                     categoria.isStatus()
                 ));
@@ -21,12 +20,12 @@ public class DaoCategoria extends Dao {
     public int updateCategoria(Categoria categoria) throws SQLException{
         String sql = "UPDATE categoria SET nome = ?, status = ? WHERE id = ?";
         return (super.executeUpdate(sql,
-                    categoria.getId(),
                     categoria.getNome(),
-                    categoria.isStatus()
+                    categoria.isStatus(),
+                    categoria.getId()
                 ));
     }    
-    public int deleteCidade(Categoria categoria) throws SQLException{
+    public int deleteCategoria(Categoria categoria) throws SQLException{
         String  sql = "DELETE FROM categoria WHERE id = ?";
         return (super.executeUpdate(
                     sql, 
